@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Docker App</title>
+</head>
+
+<body>
+  <h1>Hello Guest</h1>
+  <h2>Search a photo</h2>
+  <form method="get" action="/item/searcha">
+    <label for="search1">Search</label>
+    <input type="text" name="search1">
+    
+
+
+    <input type="submit" value="Search">
+  </form>
+  <h4>Items:</h4>
+  <ul>
+    <% items.forEach(function(item) { %>
+      <li>
+        <%= item.date1%>
+        <%= item.format%>
+        <%= item.imgSize%>
+        <%= item.orientation%>
+        <%= item.focalLength%>
+        <%= item.Exposure%>
+        <%= item.location%>
+        <%= item.date%>
+      </li>
+      <% }); %>
+  </ul>
+</body>
+
+</html>
